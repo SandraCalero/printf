@@ -17,9 +17,9 @@ void print_str(va_list s)
 	 * return("(null)");
 	 * }
 	 */
-	for (c = 0 ; c[str] != '\0' ; c++)
+	for (c = 0 ; str[c] != '\0' ; c++)
 	{
-		_putchar(c[str]);
+		_putchar(str[c]);
 	}
 	_putchar('\n');
 }
