@@ -9,11 +9,14 @@ void print_str(va_list s)
 {
 	int c;
 	char *str;
+
 	str = va_arg(s, char*);
-	/*if (str == NULL)
-	  {
-	  return("(null)");
-	  }*/
+	/*
+	 * if (str == NULL)
+	 * {
+	 * return("(null)");
+	 * }
+	 */
 	for (c = 0 ; c[str] != '\0' ; c++)
 	{
 		_putchar(c[str]);
