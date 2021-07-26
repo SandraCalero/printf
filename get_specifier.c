@@ -24,7 +24,7 @@ char (*get_specifier(char *s))(va_list)
 		;
 	while (i < len)
 	{
-		if (*s == array_specifiers[i].specifier)
+		if (*s == *array_specifiers[i].specifier)
 			return (array_specifiers[i].f);
 		i++;
 	}
