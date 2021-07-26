@@ -6,7 +6,6 @@
  *
  * Return: 0 if success
  */
-
 void print_integer(va_list list)
 {
 	int n = va_arg(list, int);
@@ -16,7 +15,7 @@ void print_integer(va_list list)
 	if (n == 0)
 	{
 		_putchar('0');
-		return (0);
+		return;
 	}
 	/* Case for negative integer: print '-' and turn int to positive */
 	if (n < 0)
@@ -29,13 +28,10 @@ void print_integer(va_list list)
 	{
 	}
 	/* Prints each digit */
-	for (i; i > 0; i = i / 10)
+	for (; i > 0; i = i / 10)
 	{
 		current_digit = n / i;
 		n = n % i;
 		_putchar('0' + current_digit);
 	}
-	/* Prints new line when finished */
-	_putchar('\n');
-	return (0);
 }

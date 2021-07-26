@@ -21,5 +21,4 @@ void print_str(va_list s)
 	{
 		_putchar(str[c]);
 	}
-	_putchar('\n');
 }
