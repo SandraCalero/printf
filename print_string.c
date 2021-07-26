@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- *  printstr - prints a string
+ *  print_str - prints a string
  *
  * @s: a pointer to a string we want to print
  * Return: Nothing
  */
-void printstr(va_list s)
+void print_str(va_list s)
 {
 	int c;
 	char *str;
