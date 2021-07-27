@@ -26,5 +26,5 @@ int print_str(va_list s)
 			_putchar(str[c]);
 		len = _strlen(str);
 	}
-	return(len);
+	return (len);
 }

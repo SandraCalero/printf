@@ -38,8 +38,8 @@ printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);*/
 printf("Address:[%p]\n", addr);*/
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
+	_printf("Lena:[%d]\n", len);
+	printf("Lene:[%d]\n", len2);
 /*_printf("Unknown:[%r]\n");
 printf("Unknown:[%r]\n");*/
 	printf("START OF TEST\n");
@@ -52,22 +52,22 @@ printf("Unknown:[%r]\n");*/
         printf("=====================\n");
         printf("*****CHAR*****\n");
         printf("=====================\n");
-        printf("Expected   : %c\n", 'a');
-        _printf("Actual     : %c\n", 'a');
-        elen = printf("Expected   : %c\n", c);
-        alen = _printf("Actual     : %c\n", c);
-        printf("Expected   : %i\n", elen);
-        printf("Actual     : %i\n", alen);
-        printf("Expected   : %cc\n", 'a');
-        _printf("Actual     : %cc\n", 'a');
-        printf("Expected   : %c\n", 53);
-        _printf("Actual     : %c\n", 53);
-        printf("Expected   : %c.\n", '\0');
-        _printf("Actual     : %c.\n", '\0');
-        printf("Expected   : %%%c\n", 'y');
-        _printf("Actual     : %%%c\n", 'y');
-        printf("Expected   : %\n");
-        _printf("Actual     : %\n");
+        printf("Expected1   : %c\n", 'a');
+        _printf("Actual1     : %c\n", 'a');
+        elen = printf("%c\n", c);
+        alen = _printf("%c\n", c);
+        printf("Expected wit input c   : %i\n", elen);
+        printf("Actual with input c    : %i\n", alen);
+        printf("Expected4   : %cc\n", 'a');
+        _printf("Actual4     : %cc\n", 'a');
+        printf("Expected5   : %c\n", 53);
+        _printf("Actual5     : %c\n", 53);
+        printf("Expected6   : %c.\n", '\0');
+        _printf("Actual6     : %c.\n", '\0');
+        printf("Expected7   : %%%c\n", 'y');
+        _printf("Actual7     : %%%c\n", 'y');
+        printf("Expected8   : %\n");
+        _printf("Actual8     : %\n");
         printf("=====================\n");
         printf("*****STRINGS*****\n");
         printf("=====================\n");
@@ -80,13 +80,25 @@ printf("Unknown:[%r]\n");*/
         alen = _printf("Actual     : %s\n", str);
         elen = printf("%s", "");
         alen = _printf("%s", "");
-        printf("Expected   : %i\n", elen);
-        printf("Actual     : %i\n", elen);
+        printf("Expected55   : %i\n", elen);
+        printf("Actual55     : %i\n", elen);
         printf("Expected   : %sschool\n", "holberton");
         _printf("Actual     : %sschool\n", "holberton");
-        elen = printf("Expected: %c%%%c%%%%%s%c%s%s\n", INT_MAX, INT_MIN, "hello", 0, "holberton", 0);
-        alen = _printf("Expected: %c%%%c%%%%%s%c%s%s\n", INT_MAX, INT_MIN, "hello", 0, "holberton", 0);
+        elen = printf("Test: %c%%%c%%%%%s%c%s%s\n", INT_MAX, INT_MIN, "hello", 0, "holberton", 0);
+        alen = _printf("Test: %c%%%c%%%%%s%c%s%s\n", INT_MAX, INT_MIN, "hello", 0, "holberton", 0);
         printf("Expected: %d\n", elen);
         printf("Actual  : %d\n", alen);
+        elen = printf("Test more variables stirng %s, number %i, percent %%\n", "sample string", 789);
+        alen = _printf("Test more variables stirng %s, number %i, percent %%\n", "sample string", 789);
+        printf("Expected56   : %i\n", elen);
+        printf("Actual56     : %i\n", alen);
+	elen = printf("What happens if %i\n", INT_MAX);
+	alen = _printf("What happens if %i\n", INT_MAX);
+	printf("Expected: %i\n", elen);
+	_printf("Actual: %i\n", alen);
+	
+        /*alen = _printf("%x\n", -1);*/
+        /*printf("Expected57   : %i\n", elen);
+        printf("%%%");*/
         return (0);
 }

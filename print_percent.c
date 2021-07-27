@@ -9,5 +9,5 @@ int print_percent(va_list perc)
 {
 	_putchar('%');
 	(void) perc;
-	return(1);
+	return (1);
 }
