@@ -6,21 +6,24 @@
  *
  * Return: 0 if success
  */
-void print_integer(va_list list)
+int print_integer(va_list list)
 {
 	int n = va_arg(list, int);
+	int count = 0;
 	unsigned int i, current_digit;
 
 	/* Edge case n is cero */
 	if (n == 0)
 	{
 		_putchar('0');
-		return;
+		count++;
+		return (count);
 	}
 	/* Case for negative integer: print '-' and turn int to positive */
 	if (n < 0)
 	{
 		_putchar('-');
+		count++;
 		n = n * (-1);
 	}
 	/* Finds the power of the integer*/
@@ -33,5 +36,7 @@ void print_integer(va_list list)
 		current_digit = n / i;
 		n = n % i;
 		_putchar('0' + current_digit);
+		count++;
 	}
+	return (count);
 }
