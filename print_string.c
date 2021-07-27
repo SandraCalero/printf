@@ -8,7 +8,7 @@
  */
 int print_str(va_list s)
 {
-	int i, c;
+	int i, c, len;
 	char *str;
 	char *null;
 

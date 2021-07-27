@@ -9,8 +9,8 @@
 int _printf(const char *format, ...)
 {
 	va_list listVar;
-	void (*fun_ptr)(va_list);
-	int positionFormat;
+	int (*fun_ptr)(va_list);
+	int positionFormat, len;
 
 	va_start(listVar, format);
 	positionFormat = 0;
@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 			_putchar(format[positionFormat]);
 		positionFormat++;
 	}
+	len = positionFormat;
 	va_end(listVar);
-	return (0);
+	return (len);
 }
