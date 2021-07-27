@@ -1,0 +1,36 @@
+% _PRINTF(3)
+% Mateo Garcia - Sandra Calero
+% July 2021
+
+# NAME
+_printf - format and prints data
+# SYNOPSIS
+**_printf** *FORMAT* [*ARGUMENT*]...\
+**_printf** *OPTION*
+
+#DESCRIPTION
+The **_printf** descripcion de lo que hace la funcion
+
+## Conversion specifiers
+**c**
+: Print a character
+
+**s**
+: Print a string
+
+**i**
+: Print an integer
+
+**d**
+: Print a decimal number in base 10
+
+**%**
+: Print an integer
+
+#RETURN VALUE
+#BUGS
+#EXAMPLES
+#AUTHORS
+: Mateo Garcia
+: Sandra Calero
+#COPYRIGHT
