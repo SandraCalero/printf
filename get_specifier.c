@@ -7,7 +7,7 @@
  * Return: a pointer to the function that corresponds to the convert specifier
  * given as a parameter. If s does not match any of the them return NULL.
  */
-char (*get_specifier(char *s))(va_list)
+void (*get_specifier(const char *s))(va_list)
 {
 	list_specifiers array_specifiers[] = {
 		{"c", print_char},

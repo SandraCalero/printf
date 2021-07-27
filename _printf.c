@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
  * _printf - produce output according to a format as the selected conversion
  * specifiers
@@ -9,21 +8,11 @@
  */
 int _printf(const char *format, ...)
 {
-	list_specifiers array_specifiers[] = {
-			{"c", print_char},
-			{"s", print_str},
-			{"%", print_percent},
-			{"d", print_integer},
-			{"i", print_integer},
-			{NULL, NULL}
-		};
 	va_list listVar;
 	void (*fun_ptr)(va_list);
-	int positionFormat, positionArray, len;
+	int positionFormat;
 
 	va_start(listVar, format);
-	for (len = 0 ; array_specifiers[len].specifier != NULL ; len++)
-		;
 	positionFormat = 0;
 	while (format != NULL && format[positionFormat] != '\0')
 	{
@@ -33,23 +22,14 @@ int _printf(const char *format, ...)
 			positionFormat++;
 			continue;
 		}
-		positionArray = 0;
-		while (positionArray < len)
+		fun_ptr = get_specifier(format + positionFormat + 1);
+		if (fun_ptr != NULL)
 		{
-			if (format[positionFormat + 1] ==
-			   *(array_specifiers[positionArray].specifier))
-			{
-				fun_ptr = array_specifiers[positionArray].f;
-				fun_ptr(listVar);
-				positionFormat++; /*mirar despues*/
-				break;
-			}
-			positionArray++;
+			fun_ptr(listVar);
+			positionFormat++; /*mirar despues*/
 		}
-		if (positionArray == len)
-		{
+		else
 			_putchar(format[positionFormat]);
-		}
 		positionFormat++;
 	}
 	va_end(listVar);

@@ -1,6 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+#include <stdlib.h>
 #include <stdarg.h>
 
 /**
@@ -18,6 +19,7 @@ typedef struct list_specifiers
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+void (*get_specifier(const char *s))(va_list);
 void print_str(va_list s);
 void print_char(va_list c);
 void print_integer(va_list list);
