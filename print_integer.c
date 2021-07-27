@@ -4,7 +4,7 @@
  * print_integer - prints the passed integer from the variadic function
  * @list: list of variadic function
  *
- * Return: 0 if success
+ * Return: Length of the interger being printed.
  */
 int print_integer(va_list list)
 {
