@@ -3,9 +3,11 @@
 /**
  * print_percent - prints a percentage sign
  * @perc: void
+ * Return: Length of a percentage
  */
-void print_percent(va_list perc)
+int print_percent(va_list perc)
 {
 	_putchar('%');
 	(void) perc;
+	return(1);
 }
