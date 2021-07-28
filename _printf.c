@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		if (fun_ptr != NULL)
 		{
 			len = len + fun_ptr(listVar);
-			positionFormat++; /*mirar despues*/
+			positionFormat++;/*Go to position conversion specifier*/
 		}
 		else
 		{
