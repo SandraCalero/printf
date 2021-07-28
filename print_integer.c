@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_integer - prints the passed integer from the variadic function
+ * print_integer - prints an integer to standard output.
  * @list: list of variadic function
  *
  * Return: Length of the interger being printed.
