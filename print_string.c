@@ -1,9 +1,10 @@
 #include "holberton.h"
+
 /**
- *  print_str - prints a string
- *
+ * print_str - prints the passed to standard output.
  * @s: a pointer to a string we want to print
- * Return: if str is NULL return length of the valriable null
+ *
+ * Return: If @str is NULL return length of the variable null
  * if not, return the length of the string.
  */
 int print_str(va_list s)

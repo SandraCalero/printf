@@ -1,10 +1,13 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
- * _printf - produce output according to a format as the selected conversion
- * specifiers
+ * _printf - prints to standard output according to a format as the selected
+ * conversion specifiers
  * @format: pointer to a string with conversion specifiers
- * Return: 0 success
+ *
+ * Return: Length of the string that prints. If @format is NULL, return -1.
+ * If the null byte is next to a percentage symbol return -1.
  */
 int _printf(const char *format, ...)
 {

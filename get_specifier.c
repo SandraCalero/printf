@@ -1,11 +1,12 @@
 #include "holberton.h"
+
 /**
- * get_specifier - selects the correct function to perform the operation asked
- * by the user
+ * get_specifier - selects the corresponding to the according to the selected
+ * conversion specifier.
+ * @s: convert specifier passed as argument to the program.
  *
- * @s: convert specifier passed as argument to the program
- * Return: a pointer to the function that corresponds to the convert specifier
- * given as a parameter. If s does not match any of the them return NULL.
+ * Return: A pointer to the function that corresponds to the convert specifier
+ * given as a parameter. If @s does not match any of the them return NULL.
  */
 int (*get_specifier(const char *s))(va_list)
 {

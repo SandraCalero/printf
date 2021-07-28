@@ -5,10 +5,9 @@
 #include <stdarg.h>
 
 /**
- * struct list_specifiers - structure of format which receives the _printf
- * function
- * @specifier: character that represent the format specifier
- * @f: Pointer to a function associated to the format specifier
+ * struct list_specifiers - Structure of a list of the conversion specifiers
+ * @specifier: Character with the conversion specifier
+ * @f: Pointer to the corresponding function.
  */
 
 typedef struct list_specifiers
