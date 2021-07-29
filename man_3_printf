@@ -19,14 +19,14 @@ Format string that contains zero or more normal characters (different to '%' cha
 The overall syntax of the conversion specification is:
 
 	%conversion_specifier
-	_printf(%d, num);
+	_printf("%d", num);
 
 The arguments given must correspond properly with the conversion specifiers. The arguments passed are used in the given order. It is an error to pass incongruent or insuficient arguments than the conversion specifiers used in format string.
 
 
 ## Conversion specifiers
 **c**
-: Argument of type **__int__** is converted to an unsigned char, and the resulting char is written.
+: Argument of type _int_ is converted to an unsigned char, and the resulting char is written.
 
 **d, i**
 : Argument of type *int* is converted to a notion of a signed decimal.
