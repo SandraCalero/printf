@@ -50,17 +50,20 @@ The header holberton.h must be used for all the examples:
 
 	#include "holberton.h"
 
-	To print the string "Betty Holberton":
+	To print a simple string "Betty Holberton":
 		_printf("Betty Holberton");
 
 	Using convertion specifier *%c*
 		_printf("This is a character: %c\n", 'H');
 
 	Using convertion specifier *%s*
-		_printf("This is a string: %s \n", "Hello, World!");
+		_printf("This is a string: %s\n", "Hello, World!");
+
+	Using convertion specifier *%d*
+		_printf("This is a number %d\n", 99);
 
 	Using convertion specifier *%i*
-		_printf("This is a number %d \n", 98);
+		_printf("This is a number %i\n", 98);
 
 	Using convertion specifier *%%*
 		_printf("This is a percentage symbol: %%\n");
