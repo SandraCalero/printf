@@ -24,5 +24,7 @@ int print_str(va_list s);
 int print_char(va_list c);
 int print_integer(va_list list);
 int print_percent(va_list perc);
+int print_binary (va_list list);
+int print_long(long long  n);
 
 #endif /* HOLBERTON_H */
